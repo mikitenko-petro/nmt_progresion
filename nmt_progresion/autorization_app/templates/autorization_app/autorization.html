@@ -1,6 +1,14 @@
 {% extends 'core_app/base.html' %}
 
 {% block content %}
-    <h1>2232 from autorization</h1>
-    <p><a href="/">back</a></p>
+    <nav>
+        <a href="/autorization/">autorization</a>
+        <a href="/">back</a>
+    </nav>
+    {% for user in users %}
+    <article>
+        <p><a href="/user/{{user.id}}">user</a></p>
+        <p>id: {{user.id}}</p>
+    </article>
+    {% endfor %}
 {% endblock %}
